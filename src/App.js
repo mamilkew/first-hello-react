@@ -2,12 +2,18 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import HelloApp from './HelloApp'
+import MyStatelessComponent from './MyStatelessComponent'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <HelloApp message="This is message sent from App.js"/>
+
+         <MyStatelessComponent
+            title="Stateless"
+            message="Example of Stateless Component"
+          />
 
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />

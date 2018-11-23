@@ -1,5 +1,9 @@
 import React from 'react'
 
+function Helloless(props) {
+  return <h1>Ahoy! {props.name}</h1>
+}
+
 class HelloApp extends React.Component {
       constructor(props) {
         super(props)
@@ -39,6 +43,7 @@ class HelloApp extends React.Component {
         //for Props, you can use this
         return (
           <React.Fragment>
+            <Helloless name="Benya" /> { /* from function Stateless */}
             <h1>Ahoy! React</h1>
             <p>{this.props.message}</p>
             {/* State */}

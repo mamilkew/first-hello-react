@@ -12,10 +12,20 @@ class HelloApp extends React.Component {
       }
 
        handleClick() {
-          this.setState({
-              counter: this.state.counter + 1
-          })
-        }
+//          this.setState({ // normal setState
+//              counter: this.state.counter + 1
+//          })
+
+//        this.setState(function(prevState) { // function for setState ES5
+//          return {
+//            counter: prevState.counter + 1
+//          }
+//        })
+
+        this.setState(prevState => ({ // arrow function for setState ES6
+          counter: prevState.counter + 1
+        }))
+       }
 
 
     render() {
